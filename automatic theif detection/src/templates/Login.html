@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<body>
+<H1 align="center"><u>LOGIN </u></H1>
+<form id="form1" name="form1" method="post" action="login">
+  <center><table width="200" border="0">
+    <tr>
+      <th scope="row">Username:</th>
+      <td><label>
+        <input type="text" name="textfield" required required pattern="[A-Z a-z 0-9]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Password:</th>
+      <td><label>
+        <input name="Password" type="password" required   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  />
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><label>
+        <input name="Submit" type="submit" value="LOGIN" />
+      </label></th>
+    </tr>
+  </table></center>
+</form>
+</body>
+{% endblock %}

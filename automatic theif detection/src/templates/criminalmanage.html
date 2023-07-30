@@ -1,0 +1,59 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>criminalmanage</title>-->
+<!--</head>-->
+{% extends 'policeindex.html' %}
+{% block body %}
+<body>
+<style>
+  #as th{
+  background-color:#33338e;
+  color:white;
+  }
+  #as td{
+  color:blue;
+  }
+
+  a, a:hover, a:focus {
+  color: #D50F0F;
+}
+</style>
+<form id="form1" name="form1" method="post" action="Addcriminal#portfolio-section">
+  <table width="746" border="1" id="as" class="table table-hover table-bordered" >
+    <tr>
+      <th width="147"><div align="center">Criminal</div></th>
+      <th width="142"><div align="center">Place</div></th>
+      <th width="111"><div align="center">Photo</div></th>
+      <th width="64"><div align="center">Gender</div></th>
+      <th width="174"><div align="center">Crime</div></th>
+      <th width="68"><div align="center"></div></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>&nbsp;{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>&nbsp;<img src="static/criminal_pic/{{i[4]}}" width="90" height="100"></td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;Crime:{{i[5]}}<br>Details:{{i[7]}}</td>
+
+      <td><p><a href="/editcriminal?id={{i[0]}}#portfolio-section">EDIT</a></p>
+        <p>
+          <!--<button value="delete" onclick="/deletecriminal?id={{i[0]}}">DELETE</button>-->
+          <a href="/deletecriminal?id={{i[0]}}#portfolio-section">DELETE</a>
+        </p></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <table width="400" border="0">
+    <tr>
+      <td><input name="Add" type="submit" value="Add" /></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->

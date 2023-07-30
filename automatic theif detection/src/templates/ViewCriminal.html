@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>ViewCriminal</title>-->
+<!--</head>-->
+{% extends 'adminindex.html' %}
+{% block body %}
+<body>
+<style>
+  #bc th{
+  background-color:#33338e;
+  color:white;
+  }
+</style>
+<form id="form1" name="form1" method="post" action="searchcrml#portfolio-section">
+<table width="485" border="0" id="bc" class="table table-hover table-bordered">
+  <tr>
+    <th width="156">Police station : </th>
+    <td width="148"><select name="textfield" class="form-control">
+      {% for i in val %}
+      <option value="{{i[6]}}">{{i[1]}}</option>
+      {% endfor %}
+    </select>
+    </td>
+    <td width="167" ><input name="Search" type="submit" value="Search" class="btn btn-primary"/></td>
+  </tr>
+</table>
+<table width="538" border="1" id="bc" class="table table-hover table-bordered">
+  <tr>
+    <th width="99">Criminal</th>
+    <th width="188">Place</th>
+    <th width="104">Photo</th>
+    <th width="129">Crime</th>
+  </tr>
+  {% for i in val1 %}
+  <tr>
+    <td>{{i[1]}}</td>
+    <td>{{i[2]}}</td>
+    <td><img src="static/criminal_pic/{{i[4]}}" width="90" height="100"></td>
+    <td>{{i[5]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+
+{% endblock %}
+<!--</html>-->

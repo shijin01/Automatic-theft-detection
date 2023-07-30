@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>LOOKOUTMANAGE</title>-->
+<!--</head>-->
+{% extends 'policeindex.html' %}
+{% block body %}
+<body>
+<style>
+  #as th{
+  background-color:#33338e;
+  color:white;
+  }
+  #as td{
+  color:blue;
+  }
+
+  a, a:hover, a:focus {
+  color: #D50F0F;
+}
+</style>
+<center>
+<form id="form1" name="form1" method="post" action="addlookout#portfolio-section">
+  <table width="400" border="1" id="as" class="table table-hover table-bordered">
+    <tr>
+      <th>Topic</th>
+      <th>Details</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td><a href="deltlookout?id={{i[0]}}">DELETE</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <table width="400">
+    <tr>
+      <td><input name="ADD" type="submit" value="ADD" /></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</form></center>
+</body>
+{% endblock %}
+<!--</html>-->

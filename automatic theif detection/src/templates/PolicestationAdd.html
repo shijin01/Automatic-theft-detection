@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>PolicestationAdd</title>-->
+<!--</head>-->
+{% extends 'adminindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="policereg">
+  <table width="200" border="0">
+    <tr>
+      <th scope="row">Station:</th>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Place:</th>
+      <td><input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}"  /></td>
+    </tr>
+    <tr>
+      <th scope="row">Post:</th>
+      <td><input type="text" name="textfield3" required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">PIN:</th>
+      <td><input type="text" name="textfield4"  required pattern="[0-9]{6}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone:</th>
+      <td><input name="phone" type="text" required pattern="[6789][0-9]{9}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Username:</th>
+      <td><input type="text" name="textfield6" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Password:</th>
+      <td><input name="textfield7" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input name="Register" type="submit" value="Register" /></th>
+  </table>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->

@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>editcriminal</title>-->
+<!--</head>-->
+
+{% extends 'policeindex.html' %}
+{% block body %}
+
+<body>
+<form action="saveeditcrmnl" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="486" border="0">
+    <tr>
+      <th width="210" height="45" scope="row">Criminal name: </th>
+      <td width="260"><input type="text" name="textfield" value="{{vals[1]}}" required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Place:</th>
+      <td><input type="text" name="textfield2" value="{{vals[2]}}" required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Gender:</th>
+      <td><input name="gender" type="radio" value="male" {% if vals[3]=='male' %} checked {% endif %}/>
+      male
+        <input name="gender" type="radio" value="female" {% if vals[3]=='female' %} checked {% endif %}/>
+      female</td>
+    </tr>
+    <tr>
+      <th scope="row">Photo:</th>
+      <td><input type="file" name="filephoto"  />{{vals[4]}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Crime:</th>
+      <td><input type="text" name="textfield3" value="{{vals[5]}}" required pattern="[A-Z a-z 0-9.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Details:</th>
+      <td><input type="text" name="textfield4" value="{{vals[7]}}" required pattern="[A-Z a-z 0-9.]{3,100}"/></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input name="Register" type="submit" value="update" /></th>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->

@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>viewcameranotification</title>-->
+<!--</head>-->
+{% extends 'policeindex.html' %}
+{% block body %}
+
+<body>
+<style>
+  #af th{
+  background-color:#33338e;
+  color:white;
+  }
+  #as td{
+  color:blue;
+  }
+
+  a, a:hover, a:focus {
+  color: #D50F0F;
+}
+</style>
+<table width="491" border="1" id="af" class="table table-hover table-bordered">
+  <tr>
+    <th width="145" scope="col">Username</th>
+    <th width="118" scope="col">Address</th>
+    <th width="206" scope="col">Camera Notification </th>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>{{i[2]}} {{i[3]}}</td>
+    <td>{{i[6]}} {{i[7]}} {{i[8]}}</td>
+    <td><img src="./static/camera_img/{{i[13]}}" width="180" height="100"></td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+{% endblock %}
+<!--</html>-->
