@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCD5A2"
+    android:backgroundTint="#ECE1E1"
+    android:backgroundTintMode="src_over"
+    android:gravity="top|center_vertical"
+    android:orientation="vertical"
+    tools:context=".home">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="HOME"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="135dp"
+        android:layout_height="20dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Add camera" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="view family member" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="add family member" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="view camera notification" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="send complaint" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="view reply" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="logout" />
+    </TableRow>
+
+</LinearLayout>

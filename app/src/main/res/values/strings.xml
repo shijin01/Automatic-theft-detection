@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Automatic thief detection</string>
+    <string name="text">textview</string>
+</resources>

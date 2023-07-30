@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.automaticthiefdetection">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/anti_theft_83"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/anti_theft_83"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AutomaticThiefDetection"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".notify_police"
+            android:exported="false" />
+        <activity
+            android:name=".custom_3"
+            android:exported="false" />
+        <activity
+            android:name=".custom_img"
+            android:exported="false" />
+        <activity
+            android:name=".custom_two"
+            android:exported="false" />
+        <activity
+            android:name=".addcamera"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".viewcameranotifiaction"
+            android:exported="false" />
+        <activity
+            android:name=".viewfamilymember"
+            android:exported="false" />
+        <activity
+            android:name=".Addfamily"
+            android:exported="true" />
+        <activity
+            android:name=".viewrply"
+            android:exported="false" />
+        <activity
+            android:name=".COMPLAINT"
+            android:exported="false" />
+        <activity
+            android:name=".IPSET"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".reg"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
